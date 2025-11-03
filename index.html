@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClaimPilot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="app-header">
+        <div class="brand">
+            <div class="brand-icon" aria-hidden="true">🩺</div>
+            <div class="brand-text">
+                <span class="brand-primary">Claim</span><span class="brand-accent">Pilot</span>
+            </div>
+        </div>
+        <p class="subtitle">AI-Powered Medical Claim Processing. Streamline your workflow with intelligent document analysis.</p>
+    </header>
+
+    <main class="container">
+        <section class="panel upload-panel">
+            <h2 class="panel-title">Upload Documents</h2>
+            <p class="panel-subtitle">Upload bill, ID card, discharge summary, etc. (PDF only)</p>
+
+            <div id="dropzone" class="dropzone" role="button" tabindex="0" aria-label="Drag and drop files here or click to browse">
+                <div class="dropzone-inner">
+                    <div class="upload-icon" aria-hidden="true">⤴️</div>
+                    <p class="dropzone-title">Drag & drop files here or click to browse</p>
+                    <p class="dropzone-subtitle">PDF files up to <strong>10MB</strong></p>
+                    <input id="file-input" class="file-input" type="file" accept="application/pdf" multiple />
+                </div>
+            </div>
+
+            <ul id="file-list" class="file-list" aria-live="polite"></ul>
+
+            <button id="process-btn" class="primary-btn" disabled>Process Claim</button>
+        </section>
+
+        <section class="panel status-panel">
+            <div class="status-content">
+                <h3 class="status-title">Ready to process your claim.</h3>
+                <p class="status-subtitle">Upload your documents to get started.</p>
+                <div id="status-details" class="status-details" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <span>© <span id="year"></span> ClaimPilot</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+

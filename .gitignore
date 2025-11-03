@@ -1,0 +1,35 @@
+
+# --- Secrets ---
+# Block all .env files to protect your API keys
+.env
+*.env
+.env.*
+
+# --- Python Virtual Environment ---
+env/
+venv/
+.venv/
+
+# --- Generated Data & Databases ---
+
+local_bge_chroma_db/
+
+# Ignore the folder where users upload their files
+uploads/
+
+# --- Python Cache & Artifacts ---
+# Ignore compiled Python files and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- IDE & OS Files ---
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
